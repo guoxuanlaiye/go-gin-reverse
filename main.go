@@ -36,7 +36,7 @@ func main() {
 }
 
 func proxyHandle(c *gin.Context) {
-	remote, err := url.Parse("http://8.140.173.124:8081")
+	remote, err := url.Parse("http://x.x.x.x:8081")
 	if err != nil {
 	}
 	k := c.Param("proxyPath") + c.Query("keyword")
@@ -78,7 +78,7 @@ func proxyHandle(c *gin.Context) {
 
 func InitRedisClient() {
 	Rds = redis.NewClient(&redis.Options{
-		Addr:     "120.48.113.9:6379",
+		Addr:     "x.x.x.x:6379",
 		Password: "rds#2023",
 		DB:       0,
 	})
